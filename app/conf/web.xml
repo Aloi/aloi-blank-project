@@ -22,10 +22,10 @@
 
 	<servlet>
 		<servlet-name>Welcome</servlet-name>
-		<servlet-class>Servlet_Welcome</servlet-class>
+		<servlet-class>Servlet_WelcomeServlet</servlet-class>
 		<init-param>
 			<param-name>templates</param-name>
-			<param-value>WEB-INF/view/welcome</param-value>
+			<param-value>../app/view/welcome</param-value>
 		</init-param>
 	</servlet>
 	
