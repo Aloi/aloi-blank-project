@@ -1,0 +1,5 @@
+To get this example working:
+1. Set your document root in Apache to the WebRoot folder. 
+2. Ensure that the directory "WebRoot/WEB-INF/cache" is writable by the web user (chmod 777 WebRoot/WEB-INF/cache)
+
+For more information go to http://aloi-project.org
