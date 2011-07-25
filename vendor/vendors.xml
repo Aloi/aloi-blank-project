@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project basedir="." default="build">
+<project basedir="." default="vendor-install">
+    <target name="vendor-install">
 
+        <antcall target="git-vendor-clone">
+            <param name="git" value="${aloi.aloi.git}" />
+        </antcall>
+        <antcall target="git-vendor-clone">
+            <param name="git" value="${aloi.deployment.git}" />
+        </antcall>
+        <antcall target="git-vendor-clone">
+            <param name="git" value="${aloi.phruts.git}" />
+        </antcall>
+        <antcall target="git-vendor-clone">
+            <param name="git" value="${aloi.phigester.git}" />
+        </antcall>
+        <antcall target="git-vendor-clone">
+            <param name="git" value="${aloi.httpserver.git}" />
+        </antcall>
+        <antcall target="git-vendor-clone">
+            <param name="git" value="${aloi.phpmvc-compat.git}" />
+        </antcall>
 
+    </target>
 
-    
+    <target name="git-vendor-clone">
+        <exec dir="${vendors.path}" executable="${git.command}">
+            <arg value="clone ${git}" />
+        </exec>
+    </target>
 </project>
