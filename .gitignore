@@ -2,3 +2,15 @@
 .idea/workspace.xml
 
 .idea/.name
+
+vendor/phruts/
+
+vendor/phigester/
+
+vendor/phpmvc-compat/
+
+vendor/httpserver/
+
+vendor/deployment/
+
+vendor/aloi/
