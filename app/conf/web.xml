@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <web-app>
-
+    <!--
 	<filter>
 		<filter-name>Routes</filter-name>
 		<filter-class>Aloi_Routes_Filter</filter-class>
@@ -10,13 +10,13 @@
 		<filter-name>Routes</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-
+    -->
 	<servlet>
 		<servlet-name>MVC</servlet-name>
 		<servlet-class>Aloi_Phruts_Action_Servlet</servlet-class>
 		<init-param>
 			<param-name>config</param-name>
-			<param-value>WEB-INF/mvc-config.xml</param-value>
+			<param-value>../app/conf/mvc-config.xml</param-value>
 		</init-param>
 	</servlet>
 

@@ -14,3 +14,11 @@ vendor/httpserver/
 vendor/deployment/
 
 vendor/aloi/
+
+app/logs/common.log
+
+app/cache/serphlet.data
+
+vendor/log4php/
+
+app/cache/phruts.data

@@ -3,31 +3,50 @@
     <property file="./vendor/vendors.properties" />
 
     <target name="vendor-install">
+        <antcall target="vendors">
+            <param name="task" value="clone"/>
+        </antcall>
+    </target>
+    
+
+    <target name="vendors">
         <!-- TODO: Compare the dependency versions -->
-        <antcall target="git-vendor-clone">
+        <antcall target="git-vendor">
+            <param name="task" value="${task}"/>
             <param name="git" value="${aloi.aloi.git}" />
         </antcall>
-        <antcall target="git-vendor-clone">
+        <antcall target="git-vendor">
+            <param name="task" value="${task}"/>
             <param name="git" value="${aloi.deployment.git}" />
         </antcall>
-        <antcall target="git-vendor-clone">
+        <antcall target="git-vendor">
+            <param name="task" value="${task}"/>
             <param name="git" value="${aloi.phruts.git}" />
         </antcall>
-        <antcall target="git-vendor-clone">
+        <antcall target="git-vendor">
+            <param name="task" value="${task}"/>
             <param name="git" value="${aloi.phigester.git}" />
         </antcall>
-        <antcall target="git-vendor-clone">
+        <antcall target="git-vendor">
+            <param name="task" value="${task}"/>
             <param name="git" value="${aloi.httpserver.git}" />
         </antcall>
-        <antcall target="git-vendor-clone">
+        <antcall target="git-vendor">
+            <param name="task" value="${task}"/>
             <param name="git" value="${aloi.phpmvc-compat.git}" />
+        </antcall>
+
+        <antcall target="git-vendor">
+            <param name="task" value="${task}"/>
+            <param name="git" value="${aloi.log4php.git}"/>
         </antcall>
 
     </target>
 
-    <target name="git-vendor-clone">
+    <target name="git-vendor-">
+
         <exec dir="./vendor" executable="git">
-            <arg value="clone" />
+            <arg value="${task}" />
             <arg value="${git}" />
         </exec>
     </target>
