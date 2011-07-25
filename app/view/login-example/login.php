@@ -1,6 +1,6 @@
 <?php
 // Access the form from the request or create a new one if necessary
-$form = Aloi_Phruts_Util_ViewUtils::getFormBean('logonForm', 'Form_Logon', 'request', true);
+$form = Aloi_Phruts_Util_ViewUtils::getFormBean('logonForm', 'Form_LogonForm', 'request', true);
 ?>
 <!DOCTYPE html>
 <html lang="en">
