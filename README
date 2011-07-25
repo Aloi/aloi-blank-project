@@ -1,5 +1,14 @@
-To get this example working:
-1. Set your document root in Apache to the WebRoot folder. 
-2. Ensure that the directory "app/cache" is writable by the web user (chmod 777 app/cache)
+This is an example blank project that comes with a quick little demo of the framework in action.
+
+Go to the project source ant type:
+
+$ ant install
+
+Update your Apache configuration to point to the project "web/" folder.
+
+Requirements:
+- Apache Webserver
+- PHP5 (works on both PHP5 and PHP5.3)
+- Apache ant (for performing CLI tasks)
 
 For more information go to http://aloi-project.org

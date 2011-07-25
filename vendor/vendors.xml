@@ -2,6 +2,13 @@
 <project basedir="." default="vendor-install">
     <property file="./vendor/vendors.properties" />
 
+    <task name="install">
+        <chmod dir="./app/cache" perm="ugo+rwx"/>
+        <chmod dir="./app/logs" perm="ugo+rwx"/>
+        <antcall target="vendor-install" />
+    </task>
+    
+
     <target name="vendor-install">
         <antcall target="vendors">
             <param name="task" value="clone"/>
