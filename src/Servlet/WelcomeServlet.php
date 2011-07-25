@@ -33,7 +33,7 @@ class Servlet_Welcome extends Aloi_Serphlet_Http_Servlet {
 			$templateDirectory = $templateConfigValue;
 		} else {
 			// Set the default
-			$templateDirectory = 'WEB-INF/view/welcome';
+			$templateDirectory = '../app/view/welcome';
 		}
 		
 		// Return the template
