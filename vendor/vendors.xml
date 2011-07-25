@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project basedir="." default="vendor-install">
-    <target name="vendor-install">
+    <property file="./vendor/vendors.properties" />
 
+    <target name="vendor-install">
+        <!-- TODO: Compare the dependency versions -->
         <antcall target="git-vendor-clone">
             <param name="git" value="${aloi.aloi.git}" />
         </antcall>
@@ -24,8 +26,9 @@
     </target>
 
     <target name="git-vendor-clone">
-        <exec dir="${vendors.path}" executable="${git.command}">
-            <arg value="clone ${git}" />
+        <exec dir="./vendor" executable="git">
+            <arg value="clone" />
+            <arg value="${git}" />
         </exec>
     </target>
 </project>

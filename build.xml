@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project basedir="." default="build">
 	<!--  // ADD LIBRARIES // -->
-	<import file="./vendors/aloi/Aloi/Deployment/build.xml" optional="true" />
-    <import file="./vendors/vendors.xml" />
+	<import file="./vendor/aloi/Aloi/Deployment/build.xml" optional="true" />
+    <import file="./vendor/vendors.xml" />
 </project>
