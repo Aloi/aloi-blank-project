@@ -1,5 +1,5 @@
 <?php
-class Action_Logon extends Aloi_Phruts_Action {
+class Action_LogonAction extends Aloi_Phruts_Action {
 	const VALID_USERNAME = 'foo';
 	const VALID_PASSWORD = 'bar';
 	

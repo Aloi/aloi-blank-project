@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deployment-configuration>
+
+	<configuration-defaults>
+		<doctrine-manager>
+            <set-property key="ATTR_VALIDATE" value="VALIDATE_ALL" />
+            <set-property key="ATTR_EXPORT" value="EXPORT_ALL" />
+        </doctrine-manager>
+        <doctrine-connection dsn="mysql://root:root@localhost/example_db"/>
+        <email from="cameronmanderson@gmail.com" subject="Default Subject" fromName="Cameron Manderson" />
+	</configuration-defaults>
+
+
+	<configuration id="live">
+		<doctrine-connection dsn="mysql://productionuser:productionpassword@my.cool.host/production_db"/>
+		<email from="liveuser@mybusiness.com" subject="My Business Email" />
+	</configuration>
+</deployment-configuration>

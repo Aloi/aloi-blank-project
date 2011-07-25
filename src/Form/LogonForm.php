@@ -1,5 +1,5 @@
 <?php
-class Form_Logon extends Aloi_Phruts_Action_Form {
+class Form_LogonForm extends Aloi_Phruts_Action_Form {
 	// Form vars
 	private $username;
 	private $password;

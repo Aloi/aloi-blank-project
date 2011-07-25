@@ -3,7 +3,7 @@
  * Simple example servlet which processes a PHP view from the server
  * @author camm
  */
-class Servlet_Welcome extends Aloi_Serphlet_Http_Servlet {
+class Servlet_WelcomeServlet extends Aloi_Serphlet_Http_Servlet {
 	public function doGet(Aloi_Serphlet_Http_Request $request, Aloi_Serphlet_Http_Response $response) {
 		// Look at what the path is and load the file
 		$path = $request->getPathInfo();
@@ -33,7 +33,7 @@ class Servlet_Welcome extends Aloi_Serphlet_Http_Servlet {
 			$templateDirectory = $templateConfigValue;
 		} else {
 			// Set the default
-			$templateDirectory = 'WEB-INF/view/welcome';
+			$templateDirectory = '../app/view/welcome';
 		}
 		
 		// Return the template
